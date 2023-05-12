@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Minutes Converter</title>
+</head>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+<style>
+}
+.center {
+  margin-left: auto;
+  margin-right: auto;
+}
+table {
+  border-collapse: collapse;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.center td, th {
+  padding: 20px;
+  border: 1px solid #355C7D;
+  border-radius: 10px;
+  color:    white;
+  background-color:#355C7D  ;
+}
+body {
+background-color:#494D5F;
+font-family: Raleway;
+text-align: center;
+margin: auto;
+color:  white;
+}
+* {
+    text-align: center;
+    margin: auto;
+}
+button {
+        background-color: #24a0ed;
+        color: white;
+        padding: 8px 16px;
+        border: none;
+        border-radius: 2px;
+        cursor: pointer;
+        font-size:  14px;
+      }
+
+      button:hover {
+        background-color: #1084cb;
+
+    }
+</style>
+
+<body>
+    <br>
+    <br>
+    <img src="https://static.vecteezy.com/system/resources/previews/009/342/688/original/clock-icon-clipart-design-illustration-free-png.png" width="250px" height="250"><br>
+    <h1>Minutes Converter</h1>
+    <h2>Converting Minutes into Seconds, Hours, and Days</h2><br>
+<table class="center">
+    <tr>
+        <th>Minutes
+            <p><input type="text" id="minutes"></p>
+            <button type="button" value="To Seconds" onclick="min2Secs()">Convert to Seconds</button>
+           <button type="button" value="To Hours" onclick="min2Hr()">Convert to Hours</button>
+            <button type="button" value="To Days" onclick="min2Day()">Convert to Days</button>
+
+        </th>
+    </tr>
+</table>
+<p id="id1"></p>
+</body>
+<script>
+    function min2Secs(){
+      var  x = (document.getElementById('minutes').value);
+        var answer = x * 60;
+       document.getElementById('id1').innerHTML = "The answer is " + answer + " seconds";
+    }
+    function min2Hr(){
+         var  x = (document.getElementById('minutes').value);
+        var answer = x / 60;
+       document.getElementById('id1').innerHTML = "The answer is " + answer + " hours";
+    }
+    function min2Day(){
+        var  x = (document.getElementById('minutes').value);
+        var answer = x * 1440 ;
+       document.getElementById('id1').innerHTML = "The answer is " + answer + " days";
+    }
+</script>
+</html>
